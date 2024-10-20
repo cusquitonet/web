@@ -9,17 +9,23 @@ def footer() -> rx.Component:
             f"2023 - {datetime.date.today().year}"
         ),
         rx.link(
-            "@CUSQUITONET",
-            href="https://cusquitonet.com",
-            color_scheme="grass",
-            is_external=True,
-            margin_top=Size.ZERO.value
+                rx.hstack(
+                    rx.icon(
+                    tag="github",
+                    size=25
+                ),
+                "@CUSQUITONET"                               
+                ),
+                href="https://github.com/cusquitonet/web",
+                color_scheme="lime",
+                is_external=True
         ),
         rx.link(
             rx.image(
-            src="favicon.ico"
+            src="/favicon.ico"
             ),
-            href="https://reflex.dev/"        
+            href="https://reflex.dev/",
+            is_external=True        
         ),
         font_size=Size.MEDIUM.value,
         marging_bottom=Size.BIG.value,

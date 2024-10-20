@@ -6,7 +6,7 @@ def link_icon(icon_name: str, url: str,) -> rx.Component:
         rx.icon(
             tag=icon_name,
             size=30,
-            color=rx.color("grass", 11),
+            color=rx.color("lime", 11),
             alt=icon_name
         ),
         href=url,

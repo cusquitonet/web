@@ -1,5 +1,5 @@
 import reflex as rx
-
+from Projects.routes import Route
 
 def navbar_searchbar() -> rx.Component:
     return rx.box(
@@ -7,13 +7,19 @@ def navbar_searchbar() -> rx.Component:
             rx.hstack(
                 rx.hstack(
                     rx.image(
-                        src="balloon.png",
+                        src="/balloon.png",
                         width="1.5em",
                         height="auto",
                         border_radius="25%",
                     ),
-                    rx.heading(
-                        "Cusquito Net", size="3", weight="bold"
+                    rx.link(
+                        rx.heading(
+                        "Cusquito Net", 
+                        size="3", 
+                        weight="bold",
+                        color_scheme="gray"
+                        ),
+                        href=Route.INDEX.value
                     ),
                     align_items="center",
                 ),
@@ -32,7 +38,7 @@ def navbar_searchbar() -> rx.Component:
             rx.hstack(
                 rx.hstack(
                     rx.image(
-                        src="balloon.png",
+                        src="/balloon.png",
                         width="2em",
                         height="auto",
                         border_radius="25%",
@@ -52,8 +58,8 @@ def navbar_searchbar() -> rx.Component:
                 justify="between",
                 align_items="center",
             ),
-        ),
-        bg=rx.color("grass", 3),
+        ),        
+        bg=rx.color("lime", 3),
         padding="0.5em",
         # position="fixed",
         # top="0px",

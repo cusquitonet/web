@@ -1,7 +1,7 @@
 import reflex as rx
 import Projects.styles.styles as styles
 
-def link_button(icono: str, title: str, body: str, url: str) -> rx.Component:
+def link_button(icono: str, title: str, body: str, url: str, is_external=True) -> rx.Component:
     return rx.link(
             rx.button(
                 rx.hstack(
@@ -18,10 +18,10 @@ def link_button(icono: str, title: str, body: str, url: str) -> rx.Component:
                     ),                    
                 ),
                 size="2",               
-                color_scheme="grass",
+                color_scheme="lime",
                 variant="surface"
             ),
             href=url,
-            is_external=True,
+            is_external=is_external,
             width="100%"
     )
