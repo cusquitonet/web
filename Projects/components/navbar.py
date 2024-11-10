@@ -43,8 +43,14 @@ def navbar_searchbar() -> rx.Component:
                         height="auto",
                         border_radius="25%",
                     ),
-                    rx.heading(
-                        "Cusquito Net", size="3", weight="bold"
+                    rx.link(
+                        rx.heading(
+                        "Cusquito Net", 
+                        size="3", 
+                        weight="bold",
+                        color_scheme="gray"
+                        ),
+                        href=Route.INDEX.value
                     ),
                     align_items="center",
                 ),
