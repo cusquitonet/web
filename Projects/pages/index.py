@@ -5,7 +5,12 @@ from Projects.components.footer import footer
 from Projects.views.header import header
 from Projects.views.index_links import index_links
 from Projects.styles import styles
+from Projects.api.api import repo
 
+class IndexState(rx.State):
+    @rx.var
+    def say_hello(self):
+        return repo()
 
 @rx.page(
     title=utils.index_title,
